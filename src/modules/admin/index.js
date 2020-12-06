@@ -55,6 +55,9 @@ async function statistics() {
 };
 
 async function init() {
+    if (!localStorage.getItem("token")) {
+        location.pathname = "/static/login.html";
+    }
     console.log(await problems());
     console.log(await statistics());
     // console.log(await getProblem());
