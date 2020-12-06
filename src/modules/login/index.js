@@ -44,6 +44,12 @@ async function init() {
     /** FUNCTION LOGIN */
     window.login = login;
     /** FUNCTION LOGIN */
+
+    /** AUTO LOGIN */
+    if (localStorage.getItem("token")) {
+        location.pathname = "/static/admin.html";
+    }
+    /** AUTO LOGIN */
 };
 
 window.addEventListener("load", init);
