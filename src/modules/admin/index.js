@@ -74,30 +74,61 @@ async function init() {
     /** ADD LISTENERS */
 
     $("#mainbutton").onclick = function () {
+        $("#mainbutton").classList.add("main__sidebar_link_active");
+        $("#staticbutton").classList.remove("main__sidebar_link_active");
+        $("#jalbutton").classList.remove("main__sidebar_link_active");
+        $("#predbutton").classList.remove("main__sidebar_link_active");
+        $("#settingbutton").classList.remove("main__sidebar_link_active");
+
         $("#dashboard").style.display = "block";
         $("#report").style.display = "none";
         $("#statistic").style.display = "none";
         $("#setting").style.display = "none";
+        
     }
     $("#staticbutton").onclick = function () {
+        $("#mainbutton").classList.remove("main__sidebar_link_active");
+        $("#staticbutton").classList.add("main__sidebar_link_active");
+        $("#jalbutton").classList.remove("main__sidebar_link_active");
+        $("#predbutton").classList.remove("main__sidebar_link_active");
+        $("#settingbutton").classList.remove("main__sidebar_link_active");
+        
         $("#dashboard").style.display = "none";
         $("#report").style.display = "none";
         $("#statistic").style.display = "block";
         $("#setting").style.display = "none";
     }
     $("#jalbutton").onclick = function () {
+        $("#mainbutton").classList.remove("main__sidebar_link_active");
+        $("#staticbutton").classList.remove("main__sidebar_link_active");
+        $("#jalbutton").classList.add("main__sidebar_link_active");
+        $("#predbutton").classList.remove("main__sidebar_link_active");
+        $("#settingbutton").classList.remove("main__sidebar_link_active");
+        
         $("#dashboard").style.display = "none";
         $("#report").style.display = "block";
         $("#statistic").style.display = "none";
         $("#setting").style.display = "none";
     }
     $("#predbutton").onclick = function () {
+        $("#mainbutton").classList.remove("main__sidebar_link_active");
+        $("#staticbutton").classList.remove("main__sidebar_link_active");
+        $("#jalbutton").classList.remove("main__sidebar_link_active");
+        $("#predbutton").classList.add("main__sidebar_link_active");
+        $("#settingbutton").classList.remove("main__sidebar_link_active");
+        
         // $("#dashboard").style.display = "block";
         // $("#report").style.display = "none";
         // $("#statistic").style.display = "none";
         // $("#setting").style.display = "none";
     }
     $("#settingbutton").onclick = function () {
+        $("#mainbutton").classList.remove("main__sidebar_link_active");
+        $("#staticbutton").classList.remove("main__sidebar_link_active");
+        $("#jalbutton").classList.remote("main__sidebar_link_active");
+        $("#predbutton").classList.remove("main__sidebar_link_active");
+        $("#settingbutton").classList.add("main__sidebar_link_active");
+        
         $("#dashboard").style.display = "none";
         $("#report").style.display = "none";
         $("#statistic").style.display = "none";
