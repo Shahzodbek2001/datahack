@@ -10,6 +10,9 @@ async function login(user) {
     const response = await ajax({ 
         method: "POST", 
         url: API_HOST, 
+        headers: {
+            "Content-Type": "application/json"
+        },
         body: {
             id: user.id,
             hash: user.hash,
