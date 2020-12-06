@@ -72,6 +72,38 @@ async function init() {
     /** AUTO REDIRECT */
 
     /** ADD LISTENERS */
+
+    $("#mainbutton").onclick = function () {
+        $("#dashboard").style.display = "";
+        $("#report").style.display = "none";
+        $("#statistic").style.display = "none";
+        $("#setting").style.display = "none";
+    }
+    $("#staticbutton").onclick = function () {
+        $("#dashboard").style.display = "none";
+        $("#report").style.display = "none";
+        $("#statistic").style.display = "";
+        $("#setting").style.display = "none";
+    }
+    $("#jalbutton").onclick = function () {
+        $("#dashboard").style.display = "none";
+        $("#report").style.display = "";
+        $("#statistic").style.display = "none";
+        $("#setting").style.display = "none";
+    }
+    $("#predbutton").onclick = function () {
+        // $("#dashboard").style.display = "";
+        // $("#report").style.display = "none";
+        // $("#statistic").style.display = "none";
+        // $("#setting").style.display = "none";
+    }
+    $("#settingbutton").onclick = function () {
+        $("#dashboard").style.display = "none";
+        $("#report").style.display = "none";
+        $("#statistic").style.display = "none";
+        $("#setting").style.display = "";
+    }
+
     const statisticsHTML1 = (await statistics()).data.map(i => {
         return `
             <div class="report__table_iteam">
