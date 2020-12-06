@@ -55,9 +55,20 @@ async function statistics() {
 };
 
 async function init() {
+    /** FAVICON INIT */
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = FAVICON_URL;
+    favicon.type = "image/png";
+    document.head.appendChild(favicon);
+    /** FAVICON INIT */
+    
+    /** AUTO REDIRECT */
     if (!localStorage.getItem("token")) {
         location.pathname = "/static/login.html";
     }
+    /** AUTO REDIRECT */
+    
     console.log(await problems());
     console.log(await statistics());
     // console.log(await getProblem());
