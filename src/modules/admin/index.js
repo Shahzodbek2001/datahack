@@ -71,10 +71,7 @@ async function init() {
     }
     /** AUTO REDIRECT */
 
-    // console.log(await getProblem());
-
     /** ADD LISTENERS */
-    console.log((await statistics()));
     const statisticsHTML1 = (await statistics()).data.map(i => {
         return `
             <div class="report__table_iteam">
@@ -83,7 +80,8 @@ async function init() {
                 <p>${i.percent_level}</p>
             </div>
         `;
-    });
+    }).join("");
+
     $("#statistic1").innerHTML = `
             <div class="report__table_iteam top">
                 <p>Регион</p>
