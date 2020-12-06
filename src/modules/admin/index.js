@@ -74,7 +74,7 @@ async function init() {
     // console.log(await getProblem());
 
     /** ADD LISTENERS */
-
+    console.log((await statistics()));
     const statisticsHTML1 = (await statistics()).data.map(i => {
         return `
             <div class="report__table_iteam">
@@ -90,6 +90,7 @@ async function init() {
                 <p>Количество</p>
                 <p>%</p>
             </div>
+            ${statisticsHTML1}
     `;
     /** ADD LISTENERS */
 };
