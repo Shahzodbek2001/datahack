@@ -3,13 +3,13 @@
 const ajax = require("../../lib/ajax");
 const { $, $$ } = require("../../lib/dom");
 
-const API_HOST = "https://unity-back.herokuapp.com/api/users/save";
+const API_URL = "https://unity-back.herokuapp.com/api/users/save";
 const FAVICON_URL = "https://unity.universe.uz/favicon.png";
 
 async function login(user) {
     const response = await ajax({ 
         method: "POST", 
-        url: API_HOST, 
+        url: API_URL, 
         headers: {
             "Content-Type": "application/json"
         },
