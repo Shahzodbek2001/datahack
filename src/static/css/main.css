@@ -8,7 +8,7 @@ body{
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'SF Pro Display',sans-serif;
 	width: 100%;
 	padding-bottom: 75px;
 }
@@ -139,13 +139,13 @@ a{
 .main__sidebar{
 	width: 26%;
 	background: linear-gradient(57.62deg, #0C486C 28.76%, #4E9C74 223.05%);
-	padding-top: 40px;
 	padding-left: 50px;
 	border-radius: 20px 0 0 20px;
 	position: relative;
 }
 .main__sidebar > img{
-	margin-bottom: 30px;
+	margin-bottom: 70px;
+	margin-top: 70px;
 	width: 200px;
 	height: 70px;
 }
@@ -157,15 +157,21 @@ a{
 	padding-left: 20px;
 	height: 50px;
 	transition: 0.3s;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 	cursor: pointer;
 }
+.main__sidebar_link img{
+	filter: invert(1);
+	width: 40px;
+	height: 40px;
+}
 .main__sidebar_link span{
-	font-size: 17px;
+	font-size: 16px;
 	margin-left: 15px;
+	color: #fff;
 }
 .main__sidebar_link_active{
-	background-color: rgba(245, 248, 252, 0.8);
+	background-color: #3A7998;
 }
 .main__sidebar_copyright{
 	position: absolute;
@@ -184,7 +190,7 @@ a{
 	padding-right: 30px;
 }
 .dashbord{
-	display: none;
+	display: block;
 }
 .dashbord__top{
 	display: flex;
@@ -209,10 +215,10 @@ a{
 .dashbord__top_search input{
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
+	background-color: #FEBA33;
 	border: none;
 	border-radius: 100px;
-	color: #C1C8D4;
+	color: #fff;
 	font-size: 16px;
 	outline: none;
 	padding-left: 40px;
@@ -226,9 +232,9 @@ a{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 10px;
-	width: 25px;
-	height: 25px;
+	left: 15px;
+	width: 15px;
+	height: 15px;
 }
 .dashbord__cards{
 	display: flex;
@@ -243,7 +249,7 @@ a{
 	border-radius: 20px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 	padding: 10px;
-	margin-right: 15px;
+	margin-right: 22px;
 }
 .dashbord__cards_iteam:last-child{
 	margin-right: 0;
@@ -256,7 +262,7 @@ a{
 .dashbord__cards_iteam p{
 	color: #C1C8D4;
 	font-size: 15px;
-	margin-right: 10px;
+	margin-right: 15px;
 }
 .dashbord__cards_iteam p span{
 	font-size: 21px;
@@ -265,7 +271,7 @@ a{
 	margin-right: 3px;
 }
 .dashbord__cards_iteam .temp{
-	width: 75px;
+	width: 90px;
 	height: 40px;
 	background-color: #F2F4F9;
 }
@@ -525,7 +531,9 @@ a{
 }
 
 /*==================================STATISTIC================================*/
-
+.statistic{
+	display: none;
+}
 .statistic .dashbord__top{
 	margin-bottom: 30px;
 }
@@ -548,6 +556,9 @@ a{
 }
 .statistic__inner_right{
 	width: calc(60% - 40px);
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 15px 15px 0 15px;
 }
 .statistic__inner_right .temp{
 	width: 100%;
@@ -560,4 +571,77 @@ a{
 }
 .statistic__inner_left_card{
 	background-attachment: fixed;
+}
+.inner2{
+	background-color: transparent;
+	box-shadow: unset;
+	padding: 0;
+}
+.statistic__inner_left_card{
+	display: flex;
+	background-color: #fff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	margin-bottom: 20px;
+}
+.statistic__inner_left_card_left p{
+	font-size: 34px;
+	color: #000;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.statistic__inner_left_card_left p sub{
+	color: #038600;
+	font-size: 16px;
+}
+.statistic__inner_left_card_left img{
+	width: 16px;
+	height: 13px;
+	display: inline-block;
+	margin-top: auto;
+	margin-left: 5px;
+}
+.statistic__inner_left_card_left .temp{
+	width: 150px;
+	height: 100px;
+	background-color: grey;
+}
+.statistic__inner_left_card_right{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 50%;
+}
+.statistic__inner_left_card_right .temp{
+	width: 110px;
+	height: 70%;
+	background-color: grey;
+}
+.statistic__inner_right_top{
+	display: flex;
+	width: 100%;
+	margin-top: 40px;
+}
+.statistic__inner_right_top .dashbord__big2_iteam{
+	width: 50%;
+	background-color: transparent;
+}
+.statistic__inner_right_bottom{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 178px;
+}
+.statistic__inner_right_bottom .temp{
+	width: 80%;
+	height: 100%;
+	background-color: grey;
+}
+
+
+/*==========================SETTING==========================*/
+.setting{
+	display: none;
+	height: 81vh;	
 }
