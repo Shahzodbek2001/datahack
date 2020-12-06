@@ -85,7 +85,7 @@ async function init() {
         `;
     });
     $("#statistic1").innerHTML = `
-            <div class="report__table_iteam">
+            <div class="report__table_iteam top">
                 <p>Регион</p>
                 <p>Количество</p>
                 <p>%</p>
