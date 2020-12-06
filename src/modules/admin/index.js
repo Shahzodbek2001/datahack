@@ -125,7 +125,7 @@ async function init() {
     $("#settingbutton").onclick = function () {
         $("#mainbutton").classList.remove("main__sidebar_link_active");
         $("#staticbutton").classList.remove("main__sidebar_link_active");
-        $("#jalbutton").classList.remote("main__sidebar_link_active");
+        $("#jalbutton").classList.remove("main__sidebar_link_active");
         $("#predbutton").classList.remove("main__sidebar_link_active");
         $("#settingbutton").classList.add("main__sidebar_link_active");
         
