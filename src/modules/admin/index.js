@@ -74,7 +74,7 @@ async function init() {
     /** ADD LISTENERS */
 
     $("#mainbutton").onclick = function () {
-        $("#dashboard").style.display = "";
+        $("#dashboard").style.display = "block";
         $("#report").style.display = "none";
         $("#statistic").style.display = "none";
         $("#setting").style.display = "none";
@@ -82,17 +82,17 @@ async function init() {
     $("#staticbutton").onclick = function () {
         $("#dashboard").style.display = "none";
         $("#report").style.display = "none";
-        $("#statistic").style.display = "";
+        $("#statistic").style.display = "block";
         $("#setting").style.display = "none";
     }
     $("#jalbutton").onclick = function () {
         $("#dashboard").style.display = "none";
-        $("#report").style.display = "";
+        $("#report").style.display = "block";
         $("#statistic").style.display = "none";
         $("#setting").style.display = "none";
     }
     $("#predbutton").onclick = function () {
-        // $("#dashboard").style.display = "";
+        // $("#dashboard").style.display = "block";
         // $("#report").style.display = "none";
         // $("#statistic").style.display = "none";
         // $("#setting").style.display = "none";
@@ -101,7 +101,7 @@ async function init() {
         $("#dashboard").style.display = "none";
         $("#report").style.display = "none";
         $("#statistic").style.display = "none";
-        $("#setting").style.display = "";
+        $("#setting").style.display = "block";
     }
 
     const statisticsHTML1 = (await statistics()).data.map(i => {
