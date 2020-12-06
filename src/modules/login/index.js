@@ -25,7 +25,10 @@ async function login(user) {
     });
 
     if (response.status === 200) {
-        alert("hello")
+        localStorage.setItem("type", response.data.admin ? "admin" : "user");
+        localStorage.setItem("userid", response.data.user_id);
+        localStorage.setItem("token", response.data.token);
+        location.pathname = "/static/admin.html";
     }
 };
 
