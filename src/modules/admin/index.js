@@ -3,6 +3,8 @@
 const ajax = require("../../lib/ajax");
 const { $, $$ } = require("../../lib/dom");
 
+const FAVICON_URL = "https://unity.universe.uz/favicon.png";
+
 async function getProblem(id) {
     const API_URL = "https://unity-back.herokuapp.com/api/problems/suggestions";
     const response = await ajax({
@@ -68,7 +70,7 @@ async function init() {
         location.pathname = "/static/login.html";
     }
     /** AUTO REDIRECT */
-    
+
     console.log(await problems());
     console.log(await statistics());
     // console.log(await getProblem());
