@@ -5,6 +5,7 @@ module.exports = [
         mode: "production",
         entry: "./src/modules/login/index.js",
         output: {
+            library: "f",
             filename: "login.min.js",
             path: path.join(__dirname, "./src/static/js")
         }

@@ -37,3 +37,5 @@ async function login(user) {
 };
 
 window.addEventListener("load", init);
+
+module.exports = login;
