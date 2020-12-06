@@ -57,7 +57,7 @@ async function statistics() {
 async function init() {
     console.log(await problems());
     console.log(await statistics());
-    console.log(await getProblem());
+    // console.log(await getProblem());
 };
 
 window.addEventListener("load", init);
