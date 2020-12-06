@@ -17,7 +17,22 @@ async function problems() {
     if (response.status === 200) {
         return response.data;
     }
+}
 
+async function statistics() {
+    const API_URL = "https://unity-back.herokuapp.com/api/problems/all";
+    const response = await ajax({
+        method: "GET",
+        url: API_URL,
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": localStorage.getItem("token")
+        }
+    });
+
+    if (response.status === 200) {
+        return response.data;
+    }
 }
 
 async function init() {
