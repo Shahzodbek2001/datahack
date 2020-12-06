@@ -75,7 +75,7 @@ async function init() {
 
     /** ADD LISTENERS */
 
-    const statisticsHTML1 = (await statistics()).map(i => {
+    const statisticsHTML1 = (await statistics()).data.map(i => {
         return `
             <div class="report__table_iteam">
                 <p>${i.region_title}</p>
