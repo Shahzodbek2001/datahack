@@ -36,7 +36,6 @@ async function init() {
     /** FAVICON INIT */
 
     /** FUNCTION LOGIN */
-    alert("hello world")
     window.login = login;
     /** FUNCTION LOGIN */
 };
