@@ -6,16 +6,6 @@ const { $, $$ } = require("../../lib/dom");
 const API_HOST = "https://unity-back.herokuapp.com/api/users/save";
 const FAVICON_URL = "https://unity.universe.uz/favicon.png";
 
-async function init() {
-    /** FAVICON INIT */
-    const favicon = document.createElement("link");
-    favicon.rel = "icon";
-    favicon.href = FAVICON_URL;
-    favicon.type = "image/png";
-    document.head.appendChild(favicon);
-    /** FAVICON INIT */
-};
-
 async function login(user) {
     const response = await ajax({ 
         method: "POST", 
@@ -36,6 +26,18 @@ async function login(user) {
     }
 };
 
-window.addEventListener("load", init);
+async function init() {
+    /** FAVICON INIT */
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = FAVICON_URL;
+    favicon.type = "image/png";
+    document.head.appendChild(favicon);
+    /** FAVICON INIT */
 
-module.exports = login;
+    /** FUNCTION LOGIN */
+    window.login = login;
+    /** FUNCTION LOGIN */
+};
+
+window.addEventListener("load", init);
