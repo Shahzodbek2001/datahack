@@ -3,8 +3,7 @@
 const ajax = require("../../lib/ajax");
 const { $, $$ } = require("../../lib/dom");
 
-const API_HOST = "";
-const API_PORT = 80;
+const API_HOST = "https://unity-back.herokuapp.com/api/users/save";
 const FAVICON_URL = "https://unity.universe.uz/favicon.png";
 
 async function init() {
@@ -13,14 +12,14 @@ async function init() {
     favicon.rel = "icon";
     favicon.href = FAVICON_URL;
     favicon.type = "image/png";
-    $("head").appendChild(favicon);
+    document.head.appendChild(favicon);
     /** FAVICON INIT */
 };
 
 async function login(user) {
     const response = await ajax({ 
         method: "POST", 
-        url: "https://host/api/users/save", 
+        url: API_HOST, 
         body: {
             id: user.id,
             hash: user.hash,
