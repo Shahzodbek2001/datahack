@@ -3,6 +3,8 @@
 const ajax = require("../../lib/ajax");
 const { $, $$ } = require("../../lib/dom");
 
+const FAVICON_URL = "https://unity.universe.uz/favicon.png";
+
 async function getProblem(id) {
     const API_URL = "https://unity-back.herokuapp.com/api/problems/suggestions";
     const response = await ajax({
@@ -55,9 +57,40 @@ async function statistics() {
 };
 
 async function init() {
-    console.log(await problems());
-    console.log(await statistics());
-    console.log(await getProblem());
+    /** FAVICON INIT */
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = FAVICON_URL;
+    favicon.type = "image/png";
+    document.head.appendChild(favicon);
+    /** FAVICON INIT */
+    
+    /** AUTO REDIRECT */
+    if (!localStorage.getItem("token")) {
+        location.pathname = "/static/login.html";
+    }
+    /** AUTO REDIRECT */
+
+    /** ADD LISTENERS */
+    const statisticsHTML1 = (await statistics()).data.map(i => {
+        return `
+            <div class="report__table_iteam">
+                <p>${i.region_title}</p>
+                <p>${i.pupil_count}</p>
+                <p>${i.percent_level}</p>
+            </div>
+        `;
+    }).join("");
+
+    $("#statistic1").innerHTML = `
+            <div class="report__table_iteam top">
+                <p>Регион</p>
+                <p>Количество</p>
+                <p>%</p>
+            </div>
+            ${statisticsHTML1}
+    `;
+    /** ADD LISTENERS */
 };
 
 window.addEventListener("load", init);
