@@ -71,9 +71,27 @@ async function init() {
     }
     /** AUTO REDIRECT */
 
-    console.log(await problems());
-    console.log(await statistics());
     // console.log(await getProblem());
+
+    /** ADD LISTENERS */
+
+    const statisticsHTML1 = (await statistics()).map(i => {
+        return `
+            <div class="report__table_iteam">
+                <p>${i.region_title}</p>
+                <p>${i.pupil_count}</p>
+                <p>${i.percent_level}</p>
+            </div>
+        `;
+    });
+    $("#statistic1").innerHTML = `
+            <div class="report__table_iteam">
+                <p>Регион</p>
+                <p>Количество</p>
+                <p>%</p>
+            </div>
+    `;
+    /** ADD LISTENERS */
 };
 
 window.addEventListener("load", init);
